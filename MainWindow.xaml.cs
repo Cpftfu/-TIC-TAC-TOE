@@ -45,21 +45,21 @@ namespace WpfApp1
 		private void Randomaizer()
 		{
 			Button[] buttons = new Button[] { _1, _2, _3, _4, _5, _6, _7, _8, _9 };
-			Random r = new Random();
-			int jopa;
+			Random rand = new Random();
+			int bimbim;
 			do
 			{
-				jopa = r.Next(0, 9);
-			} while (!(buttons[jopa].Content == "" || buttons[jopa].Content == null));
+				bimbim = rand.Next(0, 9);
+			} while (!(buttons[bimbim].Content == "" || buttons[bimbim].Content == null));
 			if (SHIT == "X")
 			{
-				buttons[jopa].Content = "O";
+				buttons[bimbim].Content = "O";
 			}
 			else
 			{
-				buttons[jopa].Content = "X";
+				buttons[bimbim].Content = "X";
 			}
-			buttons[jopa].IsEnabled = false;
+			buttons[bimbim].IsEnabled = false;
 			if (Pobeda())
 			{
 				return;
